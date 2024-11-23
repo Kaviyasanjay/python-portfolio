@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+
+{% block content %}
+<h1>about page</h1>
+
+<div class="home-section">
+    <h1>{{ content.title }}</h1>
+    <img src="{{ content.image.url }}" alt="{{ content.title }}">
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

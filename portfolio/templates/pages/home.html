@@ -1,0 +1,379 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'css/mystyles.css' %}">
+<link rel="shortcut icon" type="image/icon" href="media\images\ks-logo.png"/>
+<style>
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    .line-with-dot {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.line-with-dot::before {
+    content: '';
+    display: block;
+    width: 10px;    /* Dot size */
+    height: 10px;   /* Dot size */
+    border-radius: 50%;
+    background-color: purple;  /* Dot color */
+    margin-right: 10px;  /* Space between the dot and line */
+}
+
+.line-with-dot::after {
+    content: '';
+    display: block;
+    flex-grow: 1;
+    height: 2px;       /* Line thickness */
+    background-color: purple;  /* Line color */
+}
+
+
+
+    .line-with-dot-vertical {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background-color: #6c63ff; /* Adjust the color as needed */
+    }
+
+    .line-with-dot-vertical::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background-color: #6c63ff;
+        border-radius: 50%;
+    }
+
+
+
+</style>
+{% endblock styles %}
+
+{% block content %}
+
+
+<!-- Main Content Sections -->
+
+<section class="relative bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-32 lg:py-48">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('media/images/img1.jpg');"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl mb-4">Hi, I'm [Your Name]</h1>
+        <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+            I'm a passionate web developer, designer, and problem solver. I specialize in creating clean and efficient websites and applications.
+        </p>
+        <a href="#about" class="inline-block px-8 py-3 text-lg font-semibold bg-white text-blue-500 rounded-lg shadow-md transition-all hover:bg-blue-500 hover:text-white">
+            See My Work
+        </a>
+    </div>
+</section>
+
+<section id="about" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-8">About Me</h2><hr>
+        <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+            <!-- Text Column -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <p class="text-lg mb-4"><b>I am a Professional UI/UX Designer and Web developer. Consectetur an adipisi elita, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</b></p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam vo luptatem quia voluptas sit aspernatur aut odit aut fugit,</p>
+                <br><hr><br>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Phone Column -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="text-lg font-semibold">Phone</h3>
+                        <p class="text-md">963 852 7451</p>
+                    </div>
+                    <!-- Email Column -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="text-lg font-semibold">Email</h3>
+                        <p class="text-md">kaviya@domain.com</p>
+                    </div>
+                    <!-- Website Column -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="text-lg font-semibold">Website</h3>
+                        <p class="text-md">www.kaviya.com</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Image Column -->
+            <div class="md:w-1/2 flex justify-center">
+                <img src="media/images/profile_image.jpg" alt="Your Image" class="w-full md:w-2/3 rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="skills" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Skills</h2><hr>
+        <!-- <p class="text-lg mb-8">I have a C in Computer Science and continuously expand my knowledge through self-learning and courses.</p> -->
+        <div class="flex flex-col md:flex-row justify-center items-start space-y-8 md:space-y-0 md:space-x-8">
+            <!-- Left Column: Skills Description -->
+            <div class="md:w-1/2">
+                 <!-- Skill 1 -->
+                 <div>
+                    <h4 class="font-semibold">HTML & CSS</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">90%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-blue-600 w-9/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div>
+                    <h4 class="font-semibold">JavaScript</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">80%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-yellow-600 w-8/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div>
+                    <h4 class="font-semibold">PHP</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">70%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-green-600 w-7/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div>
+                    <h4 class="font-semibold">MySQL</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">75%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-red-600 w-3/4 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Skill Progress Bars -->
+            <div class="md:w-1/2 space-y-4">
+                <!-- Skill 1 -->
+                <div>
+                    <h4 class="font-semibold">Python</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">90%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-blue-600 w-9/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div>
+                    <h4 class="font-semibold">Django</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">80%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-yellow-600 w-8/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div>
+                    <h4 class="font-semibold">Bootstrap</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">70%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-green-600 w-7/12 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div>
+                    <h4 class="font-semibold">JQuery</h4>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">75%</span>
+                        </div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <div class="relative pt-1 w-full">
+                                <div class="flex mb-2">
+                                    <div class="progress-bar bg-red-600 w-3/4 h-2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Education</h2><hr>
+        <div class="flex flex-col md:flex-row md:space-x-8">
+            <!-- Education Column 1 -->
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <h4 class="text-xl font-semibold mb-2">2008 - 2010</h4>
+                <p class="font-semibold">Master of Computer Science</p>
+                
+                <!-- Designed Line Below the Degree -->
+                <div class="line-with-dot my-4"></div> <!-- Custom Designed Line with Dot -->
+
+            
+                <p class="text-sm">University of North Carolina</p>
+                <p class="text-sm">North Carolina, USA</p>
+                <p class="text-sm mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+            
+            <!-- Education Column 2 -->
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <h4 class="text-xl font-semibold mb-2">2004 - 2008</h4>
+                <p class="font-semibold">Bachelor of Computer Science</p>
+
+                <!-- Designed Line Below the Degree -->
+                <div class="line-with-dot my-4"></div> <!-- Custom Designed Line with Dot -->
+
+                <p class="text-sm">University of North Carolina</p>
+                <p class="text-sm">North Carolina, USA</p>
+                <p class="text-sm mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+            <!-- Education Column 3 -->
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <h4 class="text-xl font-semibold mb-2">2004 - 2008</h4>
+                <p class="font-semibold">Bachelor of Creative Design</p>
+                
+                <!-- Designed Line Below the Degree -->
+                <div class="line-with-dot my-4"></div> <!-- Custom Designed Line with Dot -->
+
+                <p class="text-sm">University of Bolton</p>
+                <p class="text-sm">Bolton, United Kingdom</p>
+                <p class="text-sm mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-8">Experience</h2>
+        <div class="flex flex-col md:flex-row md:space-x-8">
+            <!-- Experience 1 -->
+            <div class="md:w-1/3 mb-8 md:mb-0 relative">
+                <div class="line-with-dot-vertical"></div> <!-- Vertical Line with Dot -->
+                <h4 class="text-xl font-semibold mb-2">2020 - Present</h4>
+                <p class="font-semibold">Senior Web Developer</p>
+                <p class="text-sm mt-2">ABC Technologies, California, USA</p>
+                <p class="text-sm mt-2">Led the design and development of enterprise-level web applications using modern frameworks and tools.</p>
+            </div>
+            <!-- Experience 2 -->
+            <div class="md:w-1/3 mb-8 md:mb-0 relative">
+                <div class="line-with-dot-vertical"></div> <!-- Vertical Line with Dot -->
+                <h4 class="text-xl font-semibold mb-2">2015 - 2020</h4>
+                <p class="font-semibold">Frontend Developer</p>
+                <p class="text-sm mt-2">XYZ Solutions, New York, USA</p>
+                <p class="text-sm mt-2">Specialized in creating responsive UI designs and integrating APIs into dynamic web applications.</p>
+            </div>
+            <!-- Experience 3 -->
+            <div class="md:w-1/3 mb-8 md:mb-0 relative">
+                <div class="line-with-dot-vertical"></div> <!-- Vertical Line with Dot -->
+                <h4 class="text-xl font-semibold mb-2">2012 - 2015</h4>
+                <p class="font-semibold">Junior Developer</p>
+                <p class="text-sm mt-2">TechSoft Inc., Texas, USA</p>
+                <p class="text-sm mt-2">Contributed to backend logic implementation and frontend designs for small to mid-sized web projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+        <p class="text-lg">Feel free to reach out if you'd like to discuss a project or just want to connect!</p>
+        <a href="mailto:yourname@example.com" class="inline-block px-8 py-3 text-lg font-semibold bg-blue-500 text-white rounded-lg shadow-md transition-all hover:bg-blue-700">Email Me</a>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    // Select the mobile menu button and the mobile menu
+    const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuButton.querySelector('svg');
+  
+    // Function to toggle mobile menu visibility
+    mobileMenuButton.addEventListener('click', function () {
+      const isMenuOpen = mobileMenu.classList.contains('block');
+      
+      // Toggle mobile menu visibility
+      mobileMenu.classList.toggle('block', !isMenuOpen);  // Show the menu if it's hidden, hide if it's shown
+      mobileMenu.classList.toggle('hidden', isMenuOpen);  // Hide the menu if it's shown
+      
+      // Toggle the icons inside the button (hamburger / close)
+      menuIcon.classList.toggle('hidden', !isMenuOpen);  // Show close icon if the menu is open
+      mobileMenuButton.querySelector('svg:last-child').classList.toggle('hidden', isMenuOpen);  // Show hamburger icon if the menu is closed
+    });
+</script>
+{% endblock scripts %}
